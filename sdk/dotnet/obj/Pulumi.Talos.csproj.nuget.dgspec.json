@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/Pulumi.Talos.csproj": {}
+    "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-talos/sdk/dotnet/Pulumi.Talos.csproj": {}
   },
   "projects": {
-    "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/Pulumi.Talos.csproj": {
+    "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-talos/sdk/dotnet/Pulumi.Talos.csproj": {
       "version": "0.0.1",
       "restore": {
-        "projectUniqueName": "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/Pulumi.Talos.csproj",
+        "projectUniqueName": "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-talos/sdk/dotnet/Pulumi.Talos.csproj",
         "projectName": "Pulumi.Talos",
-        "projectPath": "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/Pulumi.Talos.csproj",
+        "projectPath": "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-talos/sdk/dotnet/Pulumi.Talos.csproj",
         "packagesPath": "/home/matisse/.nuget/packages/",
-        "outputPath": "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/obj/",
+        "outputPath": "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-talos/sdk/dotnet/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/matisse/.nuget/NuGet/NuGet.Config"

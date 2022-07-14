@@ -1,3 +1,3 @@
 is_global = true
 build_property.RootNamespace = Pulumi.Talos
-build_property.ProjectDir = /home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/
+build_property.ProjectDir = /home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-talos/sdk/dotnet/

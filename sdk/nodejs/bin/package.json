@@ -1,0 +1,17 @@
+{
+    "name": "@pulumi/talos",
+    "version": "0.0.1",
+    "scripts": {
+        "build": "tsc",
+        "install": "node scripts/install-pulumi-plugin.js resource talos 0.0.1"
+    },
+    "devDependencies": {
+        "typescript": "^3.7.0"
+    },
+    "peerDependencies": {
+        "@pulumi/pulumi": "latest"
+    },
+    "pulumi": {
+        "resource": true
+    }
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fnQSWXCLfeTWx1qVjRwAfZhxoe4SvnqtYT2YMTVN/qBrlXmUHHk/nB00DUh+y+xx09et7+e45aDhHVGPlO8Otw==",
+  "dgSpecHash": "Q3n1qKd2WCq2fgXBjjpT7TviBKxd2VEepdY1WJaI+/q0DH2uoP8QoriQauHtmI6Sf7MTthkHSpbEWyAMPpYdUA==",
   "success": true,
-  "projectFilePath": "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/Pulumi.Talos.csproj",
+  "projectFilePath": "/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-talos/sdk/dotnet/Pulumi.Talos.csproj",
   "expectedPackageFiles": [
     "/home/matisse/.nuget/packages/ben.demystifier/0.4.1/ben.demystifier.0.4.1.nupkg.sha512",
     "/home/matisse/.nuget/packages/grpc.core.api/2.43.0/grpc.core.api.2.43.0.nupkg.sha512",
