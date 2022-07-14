@@ -1,0 +1,65 @@
+{  
+"name": "talos",
+"resources": {
+  "talos:index:ClusterConfig": {
+    "isComponent": true,
+    "inputProperties": {
+        "controlPlaneConfig": {
+            "$ref": "#/types/talos:index:ControlPlaneConfig",
+            "description": "Provides control plane specific configuration options."
+        },
+        "clusterName": {
+          "type": "string",
+          "description": "Configures the cluster's name."
+        }
+    },
+    "requiredInputs": [
+      "controlPlaneConfig",
+      "clusterName"
+    ],
+    "properties": {
+      "configYAML": {
+        "type": "string",
+        "description": "Provides control plane specific configuration options."
+      }
+    },
+    "required": [
+      "configYAML"
+    ]
+  }
+},
+"types": {
+    "talos:index:ControlPlaneConfig": {
+        "properties": {
+            "endpoint": {
+                "type": "string"
+            },
+            "localAPIServerPort": {
+                "type": "integer"
+            }
+        },
+        "type": "object"
+    }
+},
+"language": {
+  "csharp": {
+    "packageReferences": {
+      "Pulumi": "3.*"
+    }
+  },
+  "go": {
+    "generateResourceContainerTypes": true,
+    "importBasePath": "github.com/MatisseB/pulumi-talos/sdk/go/talos"
+  },
+  "nodejs": {
+    "devDependencies": {
+      "typescript": "^3.7.0"
+    }
+  },
+  "python": {
+    "requires": {
+      "pulumi": ">=3.0.0,<4.0.0"
+    }
+  }
+}
+}
