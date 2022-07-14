@@ -1,4 +1,4 @@
-module pulumi-talos
+module github.com/MatisseB/pulumi-talos
 
 go 1.18
 
