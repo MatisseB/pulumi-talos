@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Pulumi.Talos</id>
+    <version>0.0.1</version>
+    <authors>Pulumi Corp.</authors>
+    <icon>logo.png</icon>
+    <description>Package Description</description>
+    <repository type="git" url="https://github.com/pulumi/pulumi-component-provider-go-boilerplate.git" commit="35ca77c70fd66189bc16f010e6cb0d98f1c53acc" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Pulumi" version="3.36.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/bin/Debug/netcoreapp3.1/Pulumi.Talos.pdb" target="lib/netcoreapp3.1/Pulumi.Talos.pdb" />
+    <file src="/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/bin/Debug/netcoreapp3.1/Pulumi.Talos.dll" target="lib/netcoreapp3.1/Pulumi.Talos.dll" />
+    <file src="/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/bin/Debug/netcoreapp3.1/Pulumi.Talos.xml" target="lib/netcoreapp3.1/Pulumi.Talos.xml" />
+    <file src="/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/version.txt" target="content/version.txt" />
+    <file src="/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/pulumi-plugin.json" target="content/pulumi-plugin.json" />
+    <file src="/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/logo.png" target="logo.png" />
+  </files>
+</package>

@@ -17,7 +17,8 @@ package provider
 import (
 	"net/url"
 
-	"github.com/ghodss/yaml"
+	yaml "gopkg.in/yaml.v3"
+
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/talos-systems/talos/pkg/machinery/config/types/v1alpha1"
 )

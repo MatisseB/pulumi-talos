@@ -9,13 +9,13 @@ Learn about the concepts behind [Pulumi Packages](https://www.pulumi.com/docs/gu
 
 ## Sample talos Component Provider
 
-An example `StaticPage` [component resource](https://www.pulumi.com/docs/intro/concepts/resources/#components) is available in `provider/pkg/provider/staticPage.go`. This component creates a static web page hosted in an AWS S3 Bucket. There is nothing special about `StaticPage` -- it is a typical component resource written in Go.
+An example `ClusterConfig` [component resource](https://www.pulumi.com/docs/intro/concepts/resources/#components) is available in `provider/pkg/provider/clusterConfig.go`. This component creates a static web page hosted in an AWS S3 Bucket. There is nothing special about `ClusterConfig` -- it is a typical component resource written in Go.
 
-The component provider makes component resources available to other languages. The implementation is in `provider/pkg/provider/provider.go`. Each component resource in the provider must have an implementation in the `Construct` function to create an instance of the requested component resource and return its `URN` and state (outputs). There is an initial implementation that demonstrates an implementation of `Construct` for the example `StaticPage` component.
+The component provider makes component resources available to other languages. The implementation is in `provider/pkg/provider/provider.go`. Each component resource in the provider must have an implementation in the `Construct` function to create an instance of the requested component resource and return its `URN` and state (outputs). There is an initial implementation that demonstrates an implementation of `Construct` for the example `ClusterConfig` component.
 
-A code generator is available which generates SDKs in TypeScript, Python, Go and .NET which are also checked in to the `sdk` folder. The SDKs are generated from a schema in `schema.yaml`. This file should be kept aligned with the component resources supported by the component provider implementation.
+A code generator is available which generates SDKs in TypeScript, Python, Go and .NET which are also checked in to the `sdk` folder. The SDKs are generated from a schema in `schema.json`. This file should be kept aligned with the component resources supported by the component provider implementation.
 
-An example of using the `StaticPage` component in TypeScript is in `examples/simple`.
+An example of using the `ClusterConfig` component in TypeScript is in `examples/simple`.
 
 Note that the generated provider plugin (`pulumi-resource-talos`) must be on your `PATH` to be used by Pulumi deployments. If creating a provider for distribution to other users, you should ensure they install this plugin to their `PATH`.
 
@@ -59,15 +59,15 @@ While the provider plugin must follow this naming convention, the SDK package na
 
 ## Example component
 
-Let's look at the example `StaticPage` component resource in more detail.
+Let's look at the example `ClusterConfig` component resource in more detail.
 
 ### Schema
 
-The example `StaticPage` component resource is defined in `schema.yaml`:
+The example `ClusterConfig` component resource is defined in `schema.json`:
 
 ```yaml
 resources:
-  talos:index:StaticPage:
+  talos:index:ClusterConfig:
     isComponent: true
     inputProperties:
       indexContent:
@@ -87,7 +87,7 @@ resources:
       - websiteUrl
 ```
 
-The component resource's type token is `talos:index:StaticPage` in the format of `<package>:<module>:<type>`. In this case, it's in the `talos` package and `index` module. This is the same type token passed to `RegisterComponentResource` inside the implementation of `NewStaticPage` in `provider/pkg/provider/staticPage.go`, and also the same token referenced in `Construct` in `provider/pkg/provider/provider.go`.
+The component resource's type token is `talos:index:ClusterConfig` in the format of `<package>:<module>:<type>`. In this case, it's in the `talos` package and `index` module. This is the same type token passed to `RegisterComponentResource` inside the implementation of `NewClusterConfig` in `provider/pkg/provider/clusterConfig.go`, and also the same token referenced in `Construct` in `provider/pkg/provider/provider.go`.
 
 This component has a required `indexContent` input property typed as `string`, and two required output properties: `bucket` and `websiteUrl`. Note that `bucket` is typed as the `aws:s3/bucket:Bucket` resource from the `aws` provider (in the schema the `/` is escaped as `%2F`).
 
@@ -117,43 +117,43 @@ For the Go SDK, dependencies are specified in the `sdk/go.mod` file.
 
 ### Implementation
 
-The implementation of this component is in `provider/pkg/provider/staticPage.go` and the structure of the component's inputs and outputs aligns with what is defined in `schema.yaml`:
+The implementation of this component is in `provider/pkg/provider/clusterConfig.go` and the structure of the component's inputs and outputs aligns with what is defined in `schema.json`:
 
 ```go
-// The set of arguments for creating a StaticPage component resource.
-type StaticPageArgs struct {
+// The set of arguments for creating a ClusterConfig component resource.
+type ClusterConfigArgs struct {
     IndexContent pulumi.StringInput `pulumi:"indexContent"`
 }
 
-// The StaticPage component resource.
-type StaticPage struct {
+// The ClusterConfig component resource.
+type ClusterConfig struct {
     pulumi.ResourceState
 
     Bucket     *s3.Bucket          `pulumi:"bucket"`
     WebsiteUrl pulumi.StringOutput `pulumi:"websiteUrl"`
 }
 
-// NewStaticPage creates a new StaticPage component resource.
-func NewStaticPage(ctx *pulumi.Context, name string, args *StaticPageArgs, opts ...pulumi.ResourceOption) (*StaticPage, error) {
+// NewClusterConfig creates a new ClusterConfig component resource.
+func NewClusterConfig(ctx *pulumi.Context, name string, args *ClusterConfigArgs, opts ...pulumi.ResourceOption) (*ClusterConfig, error) {
     ...
 }
 ```
 
-The provider makes this component resource available in the `construct` function in `provider/pkg/provider/provider.go`. When `construct` is called and the `typ` argument is `talos:index:StaticPage`, we create an instance of the `StaticPage` component resource and return its `URN` and state.
+The provider makes this component resource available in the `construct` function in `provider/pkg/provider/provider.go`. When `construct` is called and the `typ` argument is `talos:index:ClusterConfig`, we create an instance of the `ClusterConfig` component resource and return its `URN` and state.
 
 ```go
-func constructStaticPage(ctx *pulumi.Context, name string, inputs provider.ConstructInputs,
+func constructClusterConfig(ctx *pulumi.Context, name string, inputs provider.ConstructInputs,
     options pulumi.ResourceOption) (*provider.ConstructResult, error) {
 
-    // Copy the raw inputs to StaticPageArgs. `inputs.CopyTo` uses the types and `pulumi:` tags
+    // Copy the raw inputs to ClusterConfigArgs. `inputs.CopyTo` uses the types and `pulumi:` tags
     // on the struct's fields to convert the raw values to the appropriate Input types.
-    args := &StaticPageArgs{}
+    args := &ClusterConfigArgs{}
     if err := inputs.CopyTo(args); err != nil {
         return nil, errors.Wrap(err, "setting args")
     }
 
     // Create the component resource.
-    staticPage, err := NewStaticPage(ctx, name, args, options)
+    clusterConfig, err := NewClusterConfig(ctx, name, args, options)
     if err != nil {
         return nil, errors.Wrap(err, "creating component")
     }
@@ -161,6 +161,6 @@ func constructStaticPage(ctx *pulumi.Context, name string, inputs provider.Const
     // Return the component resource's URN and state. `NewConstructResult` automatically sets the
     // ConstructResult's state based on resource struct fields tagged with `pulumi:` tags with a value
     // that is convertible to `pulumi.Input`.
-    return provider.NewConstructResult(staticPage)
+    return provider.NewConstructResult(clusterConfig)
 }
 ```

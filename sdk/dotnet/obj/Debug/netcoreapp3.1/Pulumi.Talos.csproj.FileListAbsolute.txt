@@ -1,0 +1,13 @@
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/bin/Debug/netcoreapp3.1/Pulumi.Talos.deps.json
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/bin/Debug/netcoreapp3.1/Pulumi.Talos.dll
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/bin/Debug/netcoreapp3.1/Pulumi.Talos.pdb
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/bin/Debug/netcoreapp3.1/Pulumi.Talos.xml
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/obj/Debug/netcoreapp3.1/Pulumi.Talos.csproj.AssemblyReference.cache
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/obj/Debug/netcoreapp3.1/Pulumi.Talos.GeneratedMSBuildEditorConfig.editorconfig
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/obj/Debug/netcoreapp3.1/Pulumi.Talos.AssemblyInfoInputs.cache
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/obj/Debug/netcoreapp3.1/Pulumi.Talos.AssemblyInfo.cs
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/obj/Debug/netcoreapp3.1/Pulumi.Talos.csproj.CoreCompileInputs.cache
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/obj/Debug/netcoreapp3.1/Pulumi.Talos.sourcelink.json
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/obj/Debug/netcoreapp3.1/Pulumi.Talos.dll
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/obj/Debug/netcoreapp3.1/Pulumi.Talos.xml
+/home/matisse/Documents/wailoh/infrastructure/pulumi/components/pulumi-component-provider-go-boilerplate/sdk/dotnet/obj/Debug/netcoreapp3.1/Pulumi.Talos.pdb

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pulumi.Talos</name>
+    </assembly>
+    <members>
+        <member name="P:Pulumi.Talos.ClusterConfig.ConfigYAML">
+            <summary>
+            Provides control plane specific configuration options.
+            </summary>
+        </member>
+        <member name="M:Pulumi.Talos.ClusterConfig.#ctor(System.String,Pulumi.Talos.ClusterConfigArgs,Pulumi.ComponentResourceOptions)">
+             <summary>
+             Create a ClusterConfig resource with the given unique name, arguments, and options.
+             </summary>
+            
+             <param name="name">The unique name of the resource</param>
+             <param name="args">The arguments used to populate this resource's properties</param>
+             <param name="options">A bag of options that control this resource's behavior</param>
+        </member>
+        <member name="P:Pulumi.Talos.ClusterConfigArgs.ClusterName">
+            <summary>
+            Configures the cluster's name.
+            </summary>
+        </member>
+        <member name="P:Pulumi.Talos.ClusterConfigArgs.ControlPlaneConfig">
+            <summary>
+            Provides control plane specific configuration options.
+            </summary>
+        </member>
+        <member name="M:Pulumi.Talos.Provider.#ctor(System.String,Pulumi.Talos.ProviderArgs,Pulumi.CustomResourceOptions)">
+             <summary>
+             Create a Provider resource with the given unique name, arguments, and options.
+             </summary>
+            
+             <param name="name">The unique name of the resource</param>
+             <param name="args">The arguments used to populate this resource's properties</param>
+             <param name="options">A bag of options that control this resource's behavior</param>
+        </member>
+    </members>
+</doc>

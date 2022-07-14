@@ -2,10 +2,8 @@
     "name": "@pulumi/talos",
     "version": "${VERSION}",
     "scripts": {
-        "build": "tsc"
-    },
-    "dependencies": {
-        "@pulumi/aws": "^4.0.0"
+        "build": "tsc",
+        "install": "node scripts/install-pulumi-plugin.js resource talos ${VERSION}"
     },
     "devDependencies": {
         "typescript": "^3.7.0"
